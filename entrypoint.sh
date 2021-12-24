@@ -57,7 +57,7 @@ rm -f *.gz
 # Install adblockhome
 mkdir ${DIR_RUNTIME}/adguardhome
 mv Ad* ${DIR_RUNTIME}/adguardhome
-chmod +x ${DIR_RUNTIME}/adguardhome/AdGuardHome
+chmod 755 ${DIR_RUNTIME}/adguardhome/AdGuardHome
 
 # Run Adguardhome
 ${DIR_RUNTIME}/adguardhome/AdGuardHome -p 80
