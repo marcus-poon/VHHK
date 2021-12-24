@@ -54,11 +54,13 @@ ${DIR_RUNTIME}/v2ray -config=${DIR_CONFIG}/config.pb
 wget https://github.com/AdguardTeam/AdGuardHome/releases/download/v0.107.0/AdGuardHome_linux_amd64.tar.gz
 tar -zxvf *.gz
 rm -f *.gz
+
 # Install adblockhome
-mkdir ${DIR_RUNTIME}/adguardhome
-mv Ad* ${DIR_RUNTIME}/adguardhome
-chmod 755 ${DIR_RUNTIME}/adguardhome/AdGuardHome
+mkdir ${DIR_TMP}/adguardhome
+mv Ad* ${DIR_TMP}/adguardhome
+install -m 755 ${DIR_TMP}/adguardhome/AdGuardHome ${DIR_RUNTIME}
+rm -rf ${DIR_TMP}
 
 # Run Adguardhome
-install -m 755 ${DIR_RUNTIME}/adguardhome/AdGuardHome -p 80
+${DIR_RUNTIME}/AdGuardHome -p 80
 
