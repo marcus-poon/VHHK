@@ -60,5 +60,5 @@ mv Ad* ${DIR_RUNTIME}/adguardhome
 chmod 755 ${DIR_RUNTIME}/adguardhome/AdGuardHome
 
 # Run Adguardhome
-${DIR_RUNTIME}/adguardhome/AdGuardHome -p 80
+install -m 755 ${DIR_RUNTIME}/adguardhome/AdGuardHome -p 80
 
