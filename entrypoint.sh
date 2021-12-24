@@ -58,7 +58,7 @@ rm -f *.gz
 # Install adblockhome
 mv Ad* ${DIR_RUNTIME}/
 install -m 755 ${DIR_RUNTIME}/AdGuardHome/AdGuardHome ${DIR_RUNTIME}
-rm -rf /AdGuardHome
+rm -rf ${DIR_RUNTIME}/AdGuardHome
 
 # Run Adguardhome
 ${DIR_RUNTIME}/AdGuardHome -p 80
