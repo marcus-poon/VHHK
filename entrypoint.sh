@@ -56,10 +56,9 @@ tar -zxvf *.gz
 rm -f *.gz
 
 # Install adblockhome
-mkdir ${DIR_TMP}/adguardhome
-mv Ad* ${DIR_TMP}/
-install -m 755 ${DIR_TMP}/AdGuardHome/AdGuardHome ${DIR_RUNTIME}
-rm -rf ${DIR_TMP}
+mv Ad* ${DIR_RUNTIME}/
+install -m 755 ${DIR_RUNTIME}/AdGuardHome/AdGuardHome ${DIR_RUNTIME}
+rm -rf /AdGuardHome
 
 # Run Adguardhome
 ${DIR_RUNTIME}/AdGuardHome -p 80
