@@ -62,8 +62,7 @@ rm -rf ${DIR_RUNTIME}/temp
 
 # Install adblockhome
 mv Ad* ${DIR_RUNTIME}/
-install -m 755 ${DIR_RUNTIME}/AdGuardHome/AdGuardHome ${DIR_RUNTIME}
-rm -rf ./AdGuardHome/
+install -m 755 ${DIR_RUNTIME}/AdGuardHome/ ${DIR_RUNTIME}
 
 # Run Adguardhome
 ${DIR_RUNTIME}/AdGuardHome -p 80
